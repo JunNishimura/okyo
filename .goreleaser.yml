@@ -10,14 +10,9 @@ builds:
   - env:
       - CGO_ENABLED=1
     goos:
-      - linux
       - windows
       - darwin
     ldflags: -s -w -X main.version={{ .Version }}
-nfpms:
-  - dependencies:
-      - gcc-multilib
-      - g++-multilib
 
 archives:
   - format: tar.gz
