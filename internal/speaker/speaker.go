@@ -19,13 +19,13 @@ type Speaker interface {
 
 type mp3Speaker struct {
 	loopCount int
-	speed float64
+	speed     float64
 }
 
 func NewMp3Speaker(loopCount int, speed float64) Speaker {
 	return &mp3Speaker{
 		loopCount: loopCount,
-		speed: speed,
+		speed:     speed,
 	}
 }
 
@@ -61,7 +61,7 @@ func (s *mp3Speaker) playSound() {
 
 	speaker.Init(format.SampleRate, format.SampleRate.N(time.Second/10))
 	resampledSpeaker := beep.ResampleRatio(4, s.speed, streamer)
-	
+
 	done := make(chan bool)
 	speaker.Play(beep.Seq(resampledSpeaker, beep.Callback(func() {
 		done <- true
