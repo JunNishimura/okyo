@@ -34,7 +34,7 @@ jobs:
           echo "failed ${{ steps.test_result.outputs.failedCheckStates }}"
           exit 1
       - name: checkout sources
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - name: bump-up semantic version
@@ -42,10 +42,12 @@ jobs:
         with:
           method: "${{ github.event.inputs.method }}"
       - name: setup Go
-        uses: actions/setup-go@v3
+        uses: actions/setup-go@v5
         with:
           go-version-file: go.mod
           cache: true
+      - name: check Go version
+        run: go version
       - name: release dry run
         run: make release-dry-run
       - name: setup release environment
