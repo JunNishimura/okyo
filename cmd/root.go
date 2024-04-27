@@ -19,7 +19,7 @@ var (
 var rootCmd = &cobra.Command{
 	Use:   "okyo",
 	Short: "A cli tool to chant a hannya shingyo",
-	Long: "A cli tool to chant a hannya shingyo",
+	Long:  "A cli tool to chant a hannya shingyo",
 	Run: func(cmd *cobra.Command, args []string) {
 		speaker := speaker.NewMp3Speaker(loopCount, playSpeed)
 		speaker.Play()
@@ -37,6 +37,5 @@ func Execute() {
 
 func init() {
 	rootCmd.Flags().IntVarP(&loopCount, "count", "c", 1, "The number of times to play the audio(-1 means infinite loop)")
-	rootCmd.Flags().Float64VarP(&playSpeed, "speed", "s", 1, "The speed of the audio") 
+	rootCmd.Flags().Float64VarP(&playSpeed, "speed", "s", 1, "The speed of the audio")
 }
-
