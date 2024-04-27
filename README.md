@@ -40,5 +40,11 @@ Flag to set how fast to listen to the sutra. Default value is 1.
 $ okyo --speed 1.5
 ```
 
-# 🪧 License
+## Thanks
+The audio file for the `hannya shingyo(般若心経)` is the one read by the abbot of Jigenji(慈眼寺), which is available at the following website.
+
+http://www.sakado-jigenji.jp/download.html
+
+
+## 🪧 License
 okyo is released under MIT License. See [MIT](https://raw.githubusercontent.com/JunNishimura/okyo/main/LICENSE)
