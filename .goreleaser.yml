@@ -23,6 +23,7 @@ builds:
     goarch:
       - arm64
     env:
+      - CGO_ENABLED=1
       - CC=aarch64-linux-gnu-gcc
       - CXX=aarch64-linux-gnu-g++
     ldflags:
@@ -34,6 +35,7 @@ builds:
     goarch:
       - amd64
     env:
+      - CGO_ENABLED=1
       - CC=x86_64-linux-gnu-gcc
       - CXX=x86_64-linux-gnu-g++
     ldflags:
