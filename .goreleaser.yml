@@ -55,10 +55,24 @@ builds:
       - CXX=x86_64-linux-gnu-g++
     ldflags:
       - -s -w -X main.version={{.Version}}
-  - id: windows
+  - id: windows arm64
     main: ./
     goos:
       - windows
+    goarch:
+      - arm64
+    env:
+      - CGO_ENABLED=1
+      - CC= /llvm-mingw/bin/aarch64-w64-mingw32-gcc
+      - CXX= /llvm-mingw/bin/aarch64-w64-mingw32-g++
+    ldflags:
+      - -s -w -X main.version={{.Version}}
+  - id: windows amd64
+    main: ./
+    goos:
+      - windows
+    goarch:
+      - amd64
     env:
       - CGO_ENABLED=1
       - CC=x86_64-w64-mingw32-gcc
@@ -90,6 +104,10 @@ changelog:
     exclude:
       - '^docs:'
       - '^test:'
+release:
+  github:
+    owner: JunNishimura
+    name: okyo
 
 # The lines beneath this are called `modelines`. See `:help modeline`
 # Feel free to remove those if you don't want/use them.
