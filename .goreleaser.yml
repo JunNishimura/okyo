@@ -15,8 +15,8 @@ builds:
       - arm64
     env:
       - CGO_ENABLED=1
-      - CC=aarch64-apple-darwin20.2-clang
-      - CXX=aarch64-apple-darwin20.2-clang++
+      - CC=oa64-clang
+      - CXX=oa64-clang++
     ldflags:
       - -s -w -X main.version={{.Version}}
   - id: darwin amd64
@@ -63,8 +63,8 @@ builds:
       - arm64
     env:
       - CGO_ENABLED=1
-      - CC= /llvm-mingw/bin/aarch64-w64-mingw32-gcc
-      - CXX= /llvm-mingw/bin/aarch64-w64-mingw32-g++
+      - CC=/llvm-mingw/bin/aarch64-w64-mingw32-gcc
+      - CXX=/llvm-mingw/bin/aarch64-w64-mingw32-g++
     ldflags:
       - -s -w -X main.version={{.Version}}
   - id: windows amd64
