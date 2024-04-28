@@ -19,7 +19,7 @@ This tool runs on Darwin and Windows OS.
 brew install JunNishimura/tap/okyo
 ```
 
-#### Download directyly
+#### Download directly
 Please download the appropriate file for your environment from [here](https://github.com/JunNishimura/okyo/releases/tag/v1.0.1).
 
 ### 2. Execute Command
