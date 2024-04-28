@@ -12,15 +12,15 @@
 
 ## 💻 How to use
 ### 1. Install
+This tool runs on Darwin and Windows OS.
+
 #### Homebrew Tap
 ```
 brew install JunNishimura/tap/okyo
 ```
 
-#### go intall
-```
-go install github.com/JunNishimura/okyo@latest
-```
+#### Download directyly
+Please download the appropriate file for your environment from [here](https://github.com/JunNishimura/okyo/releases/tag/v1.0.1).
 
 ### 2. Execute Command
 ```
